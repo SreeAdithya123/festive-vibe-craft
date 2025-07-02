@@ -2,41 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Noto+Sans:wght@300;400;500;600&display=swap');
 
+/* South-Indian Traditional Design System */
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
+    /* Core Brand Colors */
+    --temple-maroon: 0 100% 27%;
+    --pattu-gold: 43 76% 52%;
+    --rangoli-coral: 357 85% 63%;
+    --lotus-cream: 46 100% 95%;
+    --kolam-bronze: 30 50% 45%;
+    
+    /* System Colors */
+    --background: 46 100% 95%;
+    --foreground: 0 100% 27%;
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
+    --card-foreground: 0 100% 27%;
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
+    --popover-foreground: 0 100% 27%;
+    
+    /* Primary Colors (Temple Maroon) */
+    --primary: 0 100% 27%;
+    --primary-foreground: 43 76% 52%;
+    
+    /* Secondary Colors (Pattu Gold) */
+    --secondary: 43 76% 52%;
+    --secondary-foreground: 0 100% 27%;
+    
+    /* Accent Colors */
+    --accent: 357 85% 63%;
+    --accent-foreground: 0 0% 100%;
+    
+    /* Muted Colors */
+    --muted: 46 100% 95%;
+    --muted-foreground: 30 50% 45%;
+    
+    /* Border and Input */
+    --border: 43 30% 85%;
+    --input: 43 30% 85%;
+    --ring: 43 76% 52%;
+    
+    /* Design System Extensions */
+    --gradient-temple: linear-gradient(135deg, hsl(var(--temple-maroon)), hsl(0 80% 35%));
+    --gradient-gold: linear-gradient(135deg, hsl(var(--pattu-gold)), hsl(48 85% 60%));
+    --gradient-festive: linear-gradient(135deg, hsl(var(--temple-maroon)), hsl(var(--pattu-gold)));
+    --shadow-temple: 0 10px 30px -10px hsl(var(--temple-maroon) / 0.3);
+    --shadow-gold: 0 0 40px hsl(var(--pattu-gold) / 0.4);
+    
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +115,89 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-noto;
   }
+}
+
+@layer components {
+  /* Kolam Pattern Background */
+  .kolam-pattern {
+    background-image: 
+      radial-gradient(circle at 25% 25%, hsl(var(--pattu-gold) / 0.1) 2px, transparent 2px),
+      radial-gradient(circle at 75% 75%, hsl(var(--temple-maroon) / 0.1) 2px, transparent 2px);
+    background-size: 60px 60px;
+  }
+  
+  /* Temple Border Pattern */
+  .temple-border {
+    border-image: linear-gradient(90deg, 
+      hsl(var(--pattu-gold)), 
+      hsl(var(--temple-maroon)), 
+      hsl(var(--pattu-gold))
+    ) 1;
+  }
+  
+  /* Diya Glow Animation */
+  .diya-glow {
+    box-shadow: 0 0 20px hsl(var(--pattu-gold) / 0.6);
+    animation: diya-flicker 2s ease-in-out infinite alternate;
+  }
+  
+  /* Peacock Feather Ripple */
+  .peacock-ripple {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .peacock-ripple::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, hsl(var(--rangoli-coral) / 0.3) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    transition: all 0.6s ease;
+  }
+  
+  .peacock-ripple:hover::before {
+    width: 300px;
+    height: 300px;
+  }
+  
+  /* Festive Counter Animation */
+  .counter-animate {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Namaskaram Hover Effect */
+  .namaskaram-hover {
+    transition: all 0.3s ease;
+  }
+  
+  .namaskaram-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-temple);
+  }
+}
+
+/* Custom Keyframe Animations */
+@keyframes diya-flicker {
+  0% { opacity: 0.8; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+  100% { opacity: 0.8; transform: scale(1); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
 }

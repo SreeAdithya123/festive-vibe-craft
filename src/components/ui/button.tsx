@@ -18,6 +18,10 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        festival: "bg-gradient-festive text-primary-foreground hover:shadow-gold diya-glow font-semibold",
+        temple: "bg-temple-maroon text-pattu-gold border-2 border-pattu-gold hover:bg-pattu-gold hover:text-temple-maroon transition-all duration-300",
+        gold: "bg-pattu-gold text-temple-maroon hover:bg-gradient-gold hover:shadow-temple font-semibold",
+        "outline-gold": "border-2 border-pattu-gold text-pattu-gold bg-transparent hover:bg-pattu-gold hover:text-temple-maroon",
       },
       size: {
         default: "h-10 px-4 py-2",
