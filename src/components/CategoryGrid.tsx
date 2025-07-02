@@ -24,6 +24,48 @@ const categories = [
     subtitle: "Transform your space",
     image: homeDecorImage,
     description: "Brass artifacts, lamps and spiritual decor"
+  },
+  {
+    id: 4,
+    title: "Ethnic Kids Wear",
+    subtitle: "Age 8-9 traditional styles",
+    image: `https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400&h=300&fit=crop`,
+    description: "Adorable traditional outfits for little ones"
+  },
+  {
+    id: 5,
+    title: "Ethnic Men's Wear",
+    subtitle: "Kurtas & traditional sets",
+    image: `https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?w=400&h=300&fit=crop`,
+    description: "Handsome ethnic wear for modern gentlemen"
+  },
+  {
+    id: 6,
+    title: "Women's Casuals",
+    subtitle: "Comfortable daily wear",
+    image: `https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=400&h=300&fit=crop`,
+    description: "Stylish and comfortable everyday outfits"
+  },
+  {
+    id: 7,
+    title: "Wedding Collections",
+    subtitle: "Bridal & groom specials",
+    image: `https://images.unsplash.com/photo-1583846499691-835b6afbf5fb?w=400&h=300&fit=crop`,
+    description: "Complete wedding ensembles for your special day"
+  },
+  {
+    id: 8,
+    title: "Fancy Sarees",
+    subtitle: "Designer collections",
+    image: `https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=400&h=300&fit=crop`,
+    description: "Contemporary designs with traditional elegance"
+  },
+  {
+    id: 9,
+    title: "Casual Ladies Wear",
+    subtitle: "Modern comfort",
+    image: `https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=400&h=300&fit=crop`,
+    description: "Trendy and comfortable ladies fashion"
   }
 ];
 
