@@ -57,6 +57,7 @@ const HeroSection = () => {
               variant="festival" 
               size="lg"
               className="text-lg px-8 py-4 h-auto namaskaram-hover"
+              onClick={() => window.open('https://maps.app.goo.gl/DgEygyK5Eap4axRw6', '_blank')}
             >
               Shop Now
             </Button>
@@ -64,6 +65,7 @@ const HeroSection = () => {
               variant="outline-gold" 
               size="lg"
               className="text-lg px-8 py-4 h-auto bg-white/10 backdrop-blur-sm namaskaram-hover"
+              onClick={() => window.open('https://maps.app.goo.gl/DgEygyK5Eap4axRw6', '_blank')}
             >
               <MapPin className="w-5 h-5 mr-2" />
               Visit Store

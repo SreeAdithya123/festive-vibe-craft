@@ -20,6 +20,7 @@ const NotificationBar = () => {
             variant="gold" 
             size="sm"
             className="text-xs font-semibold"
+            onClick={() => window.open('https://maps.app.goo.gl/DgEygyK5Eap4axRw6', '_blank')}
           >
             Shop Now
           </Button>

@@ -81,6 +81,7 @@ const StoreExperience = () => {
                     variant="festival" 
                     size="lg" 
                     className="w-full text-lg py-4 h-auto"
+                    onClick={() => window.open('https://maps.app.goo.gl/DgEygyK5Eap4axRw6', '_blank')}
                   >
                     <MapPin className="w-5 h-5 mr-2" />
                     Get Directions
@@ -100,7 +101,11 @@ const StoreExperience = () => {
                     </div>
                     <h3 className="text-2xl font-bold mb-2">Interactive Map</h3>
                     <p className="text-lotus-cream mb-6">Find us easily in the heart of Hyderabad</p>
-                    <Button variant="gold" size="lg">
+                    <Button 
+                      variant="gold" 
+                      size="lg"
+                      onClick={() => window.open('https://maps.app.goo.gl/DgEygyK5Eap4axRw6', '_blank')}
+                    >
                       View Full Map
                     </Button>
                   </div>

@@ -96,7 +96,12 @@ const CategoryGrid = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-temple-maroon/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
-                  <Button variant="gold" size="sm" className="w-full">
+                  <Button 
+                    variant="gold" 
+                    size="sm" 
+                    className="w-full"
+                    onClick={() => window.open('https://maps.app.goo.gl/DgEygyK5Eap4axRw6', '_blank')}
+                  >
                     Shop {category.title}
                   </Button>
                 </div>
