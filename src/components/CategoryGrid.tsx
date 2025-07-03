@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import sareesImage from "@/assets/sarees-category.jpg";
 import jewelryImage from "@/assets/jewelry-category.jpg";
 import homeDecorImage from "@/assets/home-decor-category.jpg";
+import weddingCoupleImage from "@/assets/wedding-couple-traditional.jpg";
 
 const categories = [
   {
@@ -50,7 +51,7 @@ const categories = [
     id: 7,
     title: "Wedding Collections",
     subtitle: "Bridal & groom specials",
-    image: `https://images.unsplash.com/photo-1583846499691-835b6afbf5fb?w=400&h=300&fit=crop`,
+    image: weddingCoupleImage,
     description: "Complete wedding ensembles for your special day"
   },
   {
