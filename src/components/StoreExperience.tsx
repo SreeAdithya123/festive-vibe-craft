@@ -33,8 +33,8 @@ const StoreExperience = () => {
                       <h4 className="font-semibold text-temple-maroon mb-1">Address</h4>
                       <p className="text-kolam-bronze">
                         G.L.R Shopping Mall<br />
-                        123 Heritage Street, Jubilee Hills<br />
-                        Hyderabad, Telangana 500033
+                        Main Rd, Nidadavole<br />
+                        Andhra Pradesh 534301, India
                       </p>
                     </div>
                   </div>
@@ -100,7 +100,7 @@ const StoreExperience = () => {
                       <MapPin className="w-10 h-10" />
                     </div>
                     <h3 className="text-2xl font-bold mb-2">Interactive Map</h3>
-                    <p className="text-lotus-cream mb-6">Find us easily in the heart of Hyderabad</p>
+                    <p className="text-lotus-cream mb-6">Find us easily in Nidadavole, Andhra Pradesh</p>
                     <Button 
                       variant="gold" 
                       size="lg"
